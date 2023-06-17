@@ -3,7 +3,7 @@ version: "3"
 services:
   web:
     image: mantis-app
-    container_name: mantis_web
+    container_name: mantisweb
     ports:
       - "8989:80"
     environment:
@@ -29,11 +29,9 @@ services:
 
   db:
     image: mysql:5.7
-    container_name: mantis_db
+    container_name: mantisdb
     ports:
       - "3310:3306"
-    volumes:
-      - ./db_data:/var/lib/mysql
     environment:
       # Change root password before first run
       - MYSQL_ROOT_PASSWORD=2023root2023

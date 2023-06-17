@@ -19,7 +19,7 @@ docker-compose up -d
 
 ### Setup
 
-Run the docker container and access to `localhost:3000/testlink` endpoint in the web browser. Testlink has the web based installer.
+Testlink has the web based installer. Run the docker container and access to `localhost:3000/testlink` endpoint in the web browser. Use user `root` and `MYSQL_ROOT_PASSWORD` from `doceker-compose.yml`, the Database host is `db` as the name of container defined in a file.
 
 Configuration:
   * Debian 10
@@ -29,6 +29,15 @@ Configuration:
   * EXPOSED @ 3000 port
   * ENTRYPOINT: /usr/bin/dumb-init
   * ENV in Dockerfile
+
+### Screenshots
+
+<div><img src="https://i.imgur.com/XCdL6Wa.png" width="50%"></div>
+
+<div><img src="https://i.imgur.com/PWdsYqo.png" width="50%"></div>
+
+<div><img src="https://i.imgur.com/9U566lB.png" width="50%"></div>
+
 ## Mantis
 
 Mantis Bug Tracker https://www.mantisbt.org/ also known as MantisBT, is a free, open-source bug tracking software that helps teams in tracking bugs, issues, and tasks throughout their software development process. It's a web-based application that is implemented in PHP and is typically used for project management, bug tracking, and issue tracking.
@@ -58,3 +67,11 @@ Configuration:
   * PHP version 7.4
   * Customization of the config files
   * ENV in Dockerfile
+
+### Screenshots
+
+<div><img src="https://i.imgur.com/GEUyp30.png" width="50%"></div>
+
+<div><img src="https://i.imgur.com/q6yi0H5.png" width="50%"></div>
+
+<div><img src="https://i.imgur.com/82xOKAd.pngsss" width="50%"></div>

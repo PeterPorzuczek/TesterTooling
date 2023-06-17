@@ -4,14 +4,20 @@ services:
 
   testlink:
     image: testlink-app
+    container_name: testlinkweb
     hostname: testlink
     ports:
-    - "3000:80"
+      - "3000:80"
+    depends_on:
+      - db
     links:
-    - testlink-database
-  testlink-database:
+      - db
+
+  db:
     image: mysql:5.6.29
+    container_name: testlinkdb
     ports:
-    - "3366:3306"
+      - "3366:3306"
     environment:
-      MYSQL_ROOT_PASSWORD: Porzuczek2023!
+      # Change root password before first run
+      - MYSQL_ROOT_PASSWORD=2023root2023
