@@ -13,6 +13,7 @@ TestLink https://testlink.org/ is an open-source test management tool that provi
 Run commands inside testlink folder.
 
 ```bash
+cd testlink
 docker build -t testlink-app .
 docker-compose up -d
 ```
@@ -47,6 +48,7 @@ Mantis Bug Tracker https://www.mantisbt.org/ also known as MantisBT, is a free, 
 Run commands inside mantis folder.
 
 ```bash
+cd mantis
 docker build -t mantis-app .
 docker-compose up -d
 ```
