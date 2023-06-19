@@ -20,7 +20,7 @@ docker-compose up -d
 
 ### Setup
 
-Testlink has the web based installer. Run the docker container and access to `localhost:3000/testlink` endpoint in the web browser. Use user `root` and `MYSQL_ROOT_PASSWORD` from `doceker-compose.yml`, the Database host is `db` as the name of container defined in a file.
+Testlink has the web based installer. Run the docker container and access to `localhost:3000/testlink` endpoint in the web browser. __Use user `root` and `MYSQL_ROOT_PASSWORD` from `doceker-compose.yml`, the Database host is `db` as the name of container defined in a file.__
 
 Configuration:
   * Debian 10
@@ -57,7 +57,7 @@ docker-compose up -d
 
 * Navigate to `localhost:8989/admin/install.php` in your browser and follow the installation guide. The default settings should be appropriate for most setups.  Faster solution is to setup user to mantis with password mantis.
 * During installation, you may encounter a warning labeled Config File Exists but Database does not. This can be overlooked as you continue with the installation.
-* After the installation is complete, log in with the default credentials as `administrator/root`. You can then adjust the settings according to your needs, typically, you'd create a new admin account and deactivate the built-in "administrator" account.
+* After the installation is complete, __log in with the default credentials as `administrator/root`.__ You can then adjust the settings according to your needs, typically, you'd create a new admin account and deactivate the built-in "administrator" account.
 * Ensure to evaluate the MantisBT's internal checks located at `localhost:8989/admin/`. It's worth noting that some warnings are expected due to existing issues in MantisBT, such as the magic quotes warning ([#26964](https://www.mantisbt.org/bugs/view.php?id=26964)) and the "folder outside of web root" warning ([#21584](https://mantisbt.org/bugs/view.php?id=21584)).
 * Once your system is ready for production, you can disable the `MANTIS_ENABLE_ADMIN` environment variable or set its value to 0. This action will eliminate the "admin" folder from the installation.
 * For other details go to [official documentation](https://www.mantisbt.org/docs/master/en-US/Admin_Guide/html-desktop/#admin.install.new)
@@ -68,6 +68,7 @@ Configuration:
   * Latest MantisBT version
   * PHP version 7.4
   * Customization of the config files
+  * EXPOSED @ 8989 port
   * ENV in Dockerfile
 
 ### Screenshots
